@@ -1,255 +1,293 @@
 <!doctype html>
 <html lang="en" class="h-100">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sticky Footer Navbar Template · Bootstrap v5.2</title>
+    <title>AskMe</title>
 
 
-
-
-<link href="../static/css/bootstrap.css" rel="stylesheet" >
+    <link href="../static/css/bootstrap.css" rel="stylesheet">
 
 
     <!-- Custom styles for this template -->
     <link href="../static/css/style.css" rel="stylesheet">
-  </head>
-  <body class="d-flex flex-column h-100">
+</head>
+<body class="d-flex flex-column h-100">
 
 <header>
-  <!-- Fixed navbar -->
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container-fluid">
-      <div class="row" style="width: 1920px;">
-      <div class="col-3">
-      <h2 style="color:white">HelpMePLZ</h2>
-      </div>
-        <div class="col-7">
-            <div class="row">
-                <div class="col-4">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-        </div>
-            </div>
-                 <div class="col-8">
-                     <div class="AskButton">Ask!</div>
-                 </div>
-        </div>
-      </div>
-
-        <div class="col-2">
-                    <div class="row" style="  margin: 10px;">
-                      <div class="col-6"><div class="fs-6" style="color:white">Register</div></div>
-                       <div class="col-6"><div class="fs-6" style="color:white">Log in</div></div>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+            <div class="row" style="width: 1920px;">
+                <div class="col-3">
+                    <h2 style="color:white">HelpMePLZ</h2>
+                </div>
+                <div class="col-7" style="margin-top:4px;">
+                    <div class="row">
+                        <div class="col-4">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#navbarCollapse" aria-controls="navbarCollapse"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarCollapse">
+                                <form class="d-flex" role="search">
+                                    <input class="form-control me-2" type="search" placeholder="Search"
+                                           aria-label="Search">
+                                    <button class="btn btn-outline-success" type="submit">Search</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="AskButton">Ask!</div>
+                        </div>
                     </div>
-        </div>
-      </div>
+                </div>
 
-    </div>
-  </nav>
+                <div class="col-2">
+                    <div class="row" style="  margin: 10px;">
+                        <div class="col-6">
+                            <div class="fs-6" style="color:white">Register</div>
+                        </div>
+                        <div class="col-6">
+                            <div class="fs-6" style="color:white">Log in</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
 </header>
 
 <!-- Begin page content -->
 <main class="flex-shrink-0">
-  <div class="container_question">
-      <div class="row">
-        <div class="col-4">
-    <h1>New questions</h1>
-             </div>
-           <div class="col-8"><h5 style="margin-top: 20px">Hot questions</h5> </div>
+     <div class="container_question">
+        <div class="ContainerWhite" style="margin-left: 60px; margin-top:20px;">
+            <h1 style="margin-right:200px;">New questions</h1>
+            <h5 style="margin-top: 20px">Hot questions</h5>
         </div>
-      <div class="row">
-        <div class="col-8">
-          <div class="question">
-            <div class="row">
-              <div class="col-2">
-                <div class="avatar_question">
-                  <img src="../static/img/Avatar1.png" alt="" />
+        <div class="row" style="margin-left: 40px">
+            <div class="col-6" >
+                <div class="question">
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="avatar_question">
+                                <img src="../static/img/Avatar1.png" alt=""/>
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <h2 class="question-title">Question 1</h2>
+                            <div class="question-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A autem consequuntur cum
+                                dolores ducimus hic nesciunt odio optio placeat praesentium.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
+                            <div class="like">5</div>
+                        </div>
+                        <div class="col-3 ">
+                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group"
+                                 style="margin-top:20px;">
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off"
+                                       checked>
+                                <label class="btn btn-outline-primary" for="btnradio1">Like</label>
+
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btnradio2">Dislike</label>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="AnswerButton">answer(3)</div>
+                        </div>
+                        <div class="col-5">
+                            <div class="question_tag">
+                                <ul class="nav">
+                                    <li class="nav-item">
+                                        <h5 style="margin-top:10px;">Tags:</h5>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">Tag1</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Tag2</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Tag3</a>
+                                    </li>
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="col-10">
-                <h2 class="question-title">Question 1</h2>
-                <div class="question-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A autem consequuntur cum dolores ducimus hic nesciunt odio optio placeat praesentium.
+
+                <div class="question">
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="avatar_question">
+                                <img src="../static/img/Avatar2.jpeg" alt=""/>
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <h2 class="question-title">Question 2</h2>
+                            <div class="question-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, accusantium animi enim
+                                nesciunt omnis quam quibusdam repellendus similique velit voluptatum!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
+                            <div class="like">5</div>
+                        </div>
+                        <div class="col-3">
+                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group"
+                                 style="margin-top:20px;">
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off"
+                                       checked>
+                                <label class="btn btn-outline-primary" for="btnradio3">Like</label>
+
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btnradio4">Dislike</label>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="AnswerButton">answer(3)</div>
+                        </div>
+                        <div class="col-5">
+                            <div class="question_tag">
+                                <ul class="nav">
+
+                                    <li class="nav-item">
+                                        <h5 style="margin-top:10px;">Tags:</h5>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">Tag1</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Tag2</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Tag3</a>
+                                    </li>
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
+                <div class="question">
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="avatar_question">
+                                <img src="../static/img/Avatar3.jpg" alt=""/>
+                            </div>
+                        </div>
+                        <div class="col-10">
+                            <h2 class="question-title">Question 3</h2>
+                            <div class="question-text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, accusantium animi enim
+                                nesciunt omnis quam quibusdam repellendus similique velit voluptatum!
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
+                            <div class="like">5</div>
+                        </div>
+                        <div class="col-3">
+                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group"
+                                 style="margin-top:20px;">
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off"
+                                       checked>
+                                <label class="btn btn-outline-primary" for="btnradio5">Like</label>
+                                <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
+                                <label class="btn btn-outline-primary" for="btnradio6">Dislike</label>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="AnswerButton">answer(3)</div>
+                        </div>
+                        <div class="col-5">
+                            <div class="question_tag">
+                                <ul class="nav">
+                                    <li class="nav-item">
+                                        <h5 style="margin-top:10px;">Tags:</h5>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">Tag1</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Tag2</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Tag3</a>
+                                    </li>
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+
             </div>
-            <div class="row">
-           <div class="col-1"> <div class="like">5</div></div>
-              <div class="col-3 ">
-                <div class="btn-group" role="group" aria-label="Basic radio toggle button group" style="margin-top:20px;">
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-                <label class="btn btn-outline-primary" for="btnradio1">Like</label>
+            <div class="col-6"  style="padding-right: 200px;">
+                <div class="container_tags">
+                    <h1>Popular tags</h1>
 
-                 <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                 <label class="btn btn-outline-primary" for="btnradio2">Dislike</label>
-                </div>
-                </div>
-                <div class="col-3">
-                    <div class="AnswerButton">answer(3)</div>
-                </div>
-          <div class="col-5"><div class="question_tag"> <ul class="nav">
-              <li class="nav-item">
-    <h5 style="margin-top:10px;">Tags:</h5>
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Tag1</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Tag2</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Tag3</a>
-  </li>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">A tag</li>
+                        <li class="list-group-item">A second tag</li>
+                        <li class="list-group-item">A third tag</li>
+                        <li class="list-group-item">A fourth tag</li>
+                        <li class="list-group-item">And a fifth one</li>
+                    </ul>
+                    <h1 style="margin-top:30px;">Best members</h1></div>
+                <ol class="list-group list-group-numbered" style="margin-right: 130px; margin-left: 80px;">
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">SuperCrut</div>
+                            Some information
+                        </div>
+                        <span class="badge bg-primary rounded-pill">344</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">MegaHorosh</div>
+                            Some information
+                        </div>
+                        <span class="badge bg-primary rounded-pill">289</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Neploh</div>
+                            Some information
+                        </div>
+                        <span class="badge bg-primary rounded-pill">267</span>
+                    </li>
+                </ol>
 
-  </li>
-</ul></div></div>
             </div>
-          </div>
-
-          <div class="question">
-            <div class="row">
-              <div class="col-2">
-                <div class="avatar_question">
-                  <img src="../static/img/Avatar2.jpeg" alt="" />
-                </div>
-              </div>
-              <div class="col-10">
-                <h2 class="question-title">Question 2</h2>
-                <div class="question-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, accusantium animi enim nesciunt omnis quam quibusdam repellendus similique velit voluptatum!
-                </div>
-              </div>
-            </div>
-                <div class="row">
-           <div class="col-1"> <div class="like">5</div></div>
-              <div class="col-3">
-<div class="btn-group" role="group" aria-label="Basic radio toggle button group" style="margin-top:20px;">
-  <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" checked>
-  <label class="btn btn-outline-primary" for="btnradio3">Like</label>
-
-  <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
-  <label class="btn btn-outline-primary" for="btnradio4">Dislike</label>
-</div></div>
-                    <div class="col-3">
-                    <div class="AnswerButton">answer(3)</div>
-                </div> <div class="col-5"><div class="question_tag"> <ul class="nav">
-
-              <li class="nav-item">
-    <h5 style="margin-top:10px;">Tags:</h5>
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Tag1</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Tag2</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Tag3</a>
-  </li>
-
-  </li>
-</ul></div></div></div>
-          </div>
-          <div class="question">
-            <div class="row">
-              <div class="col-2">
-                <div class="avatar_question">
-                  <img src="../static/img/Avatar3.jpg" alt="" />
-                </div>
-              </div>
-              <div class="col-10">
-                <h2 class="question-title">Question 3</h2>
-                <div class="question-text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, accusantium animi enim nesciunt omnis quam quibusdam repellendus similique velit voluptatum!
-                </div>
-              </div>
-            </div>
-                <div class="row">
-           <div class="col-1"> <div class="like">5</div></div>
-              <div class="col-3">
-<div class="btn-group" role="group" aria-label="Basic radio toggle button group" style="margin-top:20px;">
-  <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off" checked>
-  <label class="btn btn-outline-primary" for="btnradio5">Like</label>
-  <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
-  <label class="btn btn-outline-primary" for="btnradio6">Dislike</label>
-</div></div> <div class="col-3">
-                    <div class="AnswerButton">answer(3)</div>
-                </div><div class="col-5"><div class="question_tag"> <ul class="nav">
-              <li class="nav-item">
-    <h5 style="margin-top:10px;">Tags:</h5>
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Tag1</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Tag2</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Tag3</a>
-  </li>
-
-  </li>
-</ul></div></div></div>
-          </div>
-            <ul class="pagination">
-    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-  </ul>
-
-        </div>
-        <div class="col-4">
-             <div class="container_tags">
-               <h1>Popular tags</h1>
-
-         <ul class="list-group list-group-flush">
-  <li class="list-group-item">A tag</li>
-  <li class="list-group-item">A second tag</li>
-  <li class="list-group-item">A third tag</li>
-  <li class="list-group-item">A fourth tag</li>
-  <li class="list-group-item">And a fifth one</li>
-</ul>
-                <h1 style="margin-top:30px;">Best members</h1></div>
-               <ol class="list-group list-group-numbered" style="margin-right: 130px; margin-left: 80px;">
-  <li class="list-group-item d-flex justify-content-between align-items-start">
-    <div class="ms-2 me-auto">
-      <div class="fw-bold">SuperCrut</div>
-      Some information
-    </div>
-    <span class="badge bg-primary rounded-pill">344</span>
-  </li>
-  <li class="list-group-item d-flex justify-content-between align-items-start">
-    <div class="ms-2 me-auto">
-      <div class="fw-bold">MegaHorosh</div>
-      Some information
-    </div>
-    <span class="badge bg-primary rounded-pill">289</span>
-  </li>
-  <li class="list-group-item d-flex justify-content-between align-items-start">
-    <div class="ms-2 me-auto">
-      <div class="fw-bold">Neploh</div>
-      Some information
-    </div>
-    <span class="badge bg-primary rounded-pill">267</span>
-  </li>
-</ol>
-
-          </div>
         </div>
     </div>
 
 </main>
 
 
+<script src="/docs/5.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
 
-    <script src="/docs/5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
-
-  </body>
+</body>
 </html>
