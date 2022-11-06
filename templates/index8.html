@@ -5,9 +5,7 @@
 {% block content %}
 
     <div class="ContainerWhite" style=" margin-top:20px;">
-        <h1 style="margin-right:200px;">New questions</h1>
-        <a href="{% url 'hot' %}" style="  font-size: 18px;  margin-top:16px;">Hot
-            question</a>
+        <h1>Hot questions</h1>
     </div>
     {% for question in questions %}
         {% include 'inc/question_item.html' %}

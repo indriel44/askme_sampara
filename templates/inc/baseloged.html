@@ -1,0 +1,134 @@
+{% load static %}
+
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AskMe</title>
+
+
+    <link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
+</head>
+<body class="d-flex flex-column h-100">
+
+<header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+            <div class="row" style="width: 1920px;">
+               <div class="col-3" style="padding-top: 6px;padding-left: 20px;">
+                    <a class="navbar-brand" href="{% url 'index1' %}" style="  font-size: 34px;">HelpMePLZ</a>
+                </div>
+                <div class="col-7" style="padding-top:14px;">
+                    <div class="row">
+                        <div class="col-4">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#navbarCollapse" aria-controls="navbarCollapse"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarCollapse">
+                                <form class="d-flex" role="search">
+                                    <input class="form-control me-2" type="search" placeholder="Search"
+                                           aria-label="Search">
+                                    <button class="btn btn-outline-success" type="submit">Search</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <a class="btn btn-outline-success" href="{% url 'ask' %}" role="button">Ask!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-2" style="  margin-top: 8px;">
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="avatar">
+                                <img src="{% static "img/Avatar1.png" %}" alt=""/>
+                            </div>
+                        </div>
+                        <div class="col-10" style="padding-left:24px;">
+                            <h5 style="color:white"> My Name</h5>
+                            <div class="ContainerBlack" style="color:white">
+                                <div class="HeaderTextSmall"> <a class="navbar-brand" href="{% url 'settings' %}" style="font-size: 16px;">Settings</a></div>
+                                <div class="HeaderTextSmall"><a class="navbar-brand" href="{% url 'loged' %}" style="font-size: 16px;">Log out</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+</header>
+
+<!-- Begin page content -->
+<main class="flex-shrink-0">
+    <div class="container_question">
+
+        <div class="row" style="margin-left: 40px">
+            <div class="col-6">
+                {% block content %}
+                {% endblock %}
+
+            </div>
+            <div class="col-6" style="padding-right: 200px;">
+                <div class="container_tags">
+                    <h1 style=" margin-top:30px;">Popular tags</h1>
+
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><a class="navbar-brand" href="{% url 'tag' %}"
+                                                       style="font-size: 16px; ">Tag1</a></li>
+                        <li class="list-group-item"><a class="navbar-brand" href="#" style="font-size: 16px; ">Tag2</a>
+                        </li>
+                        <li class="list-group-item"><a class="navbar-brand" href="#" style="font-size: 16px; ">Tag3</a>
+                        </li>
+                        <li class="list-group-item"><a class="navbar-brand" href="#" style="font-size: 16px; ">Tag4</a>
+                        </li>
+                        <li class="list-group-item"><a class="navbar-brand" href="#" style="font-size: 16px; ">Tag5</a>
+                        </li>
+                    </ul>
+                    <h1 style="margin-top:30px;">Best members</h1></div>
+                <ol class="list-group list-group-numbered" style="margin-right: 130px; margin-left: 80px;">
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">SuperCrut</div>
+                            Some information
+                        </div>
+                        <span class="badge bg-primary rounded-pill">344</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">MegaHorosh</div>
+                            Some information
+                        </div>
+                        <span class="badge bg-primary rounded-pill">289</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Neploh</div>
+                            Some information
+                        </div>
+                        <span class="badge bg-primary rounded-pill">267</span>
+                    </li>
+                </ol>
+
+            </div>
+        </div>
+    </div>
+
+</main>
+
+
+<script src="/docs/5.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+
+
+</body>
+</html>

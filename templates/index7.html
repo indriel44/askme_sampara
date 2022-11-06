@@ -1,248 +1,116 @@
-<!doctype html>
-<html lang="en" class="h-100">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AskMe</title>
+{% extends "inc/base.html" %}
 
+{% load static %}
 
-    <link href="../static/css/bootstrap.css" rel="stylesheet">
+{% block content %}
 
-
-    <!-- Custom styles for this template -->
-    <link href="../static/css/style.css" rel="stylesheet">
-</head>
-<body class="d-flex flex-column h-100">
-
-<header>
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <div class="container-fluid">
-            <div class="row" style="width: 1920px;">
-                <div class="col-3">
-                    <h2 style="color:white">HelpMePLZ</h2>
-                </div>
-                <div class="col-7" style="margin-top:4px;">
-                    <div class="row">
-                        <div class="col-4">
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#navbarCollapse" aria-controls="navbarCollapse"
-                                    aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarCollapse">
-                                <form class="d-flex" role="search">
-                                    <input class="form-control me-2" type="search" placeholder="Search"
-                                           aria-label="Search">
-                                    <button class="btn btn-outline-success" type="submit">Search</button>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="col-8">
-                            <div class="AskButton">Ask!</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-2">
-                    <div class="row" style="  margin: 10px;">
-                        <div class="col-6">
-                            <div class="fs-6" style="color:white">Register</div>
-                        </div>
-                        <div class="col-6">
-                            <div class="fs-6" style="color:white">Log in</div>
-                        </div>
-                    </div>
+    <div class="QuestionPage pb-2 mb-4  border-bottom border-3 border-secondary">
+        <div class="row">
+            <div class="col-2" style="padding: 0px;">
+                <div class="avatar_QuestionPage ">
+                    <img src="{% static "img/Avatar1.png" %}" alt=""/>
                 </div>
             </div>
-
+            <div class="col-10">
+                <h2 class="question-title">{{ question.title }}</h2>
+                <div class="question-text">
+                    {{ question.text }}
+                </div>
+            </div>
         </div>
-    </nav>
-</header>
+        <div class="row">
+            <div class="col-4" style="padding: 0px;">
+                <div class="ContainerWhite">
+                    <div class="likePage">5</div>
+                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group"
+                         style="margin:20px;">
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1"
+                               autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btnradio1">Up</label>
 
-<!-- Begin page content -->
-<main class="flex-shrink-0">
-    <div class="container_question">
-        <div class="row" style="margin-left: 40px">
-            <div class="col-6">
-                <div class="QuestionPage pb-2 mb-4  border-bottom border-3 border-secondary">
-                    <div class="row">
-                        <div class="col-2" style="padding: 0px;">
-                            <div class="avatar_QuestionPage ">
-                                <img src="../static/img/Avatar1.png" alt=""/>
-                            </div>
-                        </div>
-                        <div class="col-10">
-                            <h2 class="question-title">Question 1</h2>
-                            <div class="question-text">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ad, architecto aspernatur
-                                atque aut beatae consectetur deleniti deserunt dicta error eum facere hic id illum ipsa
-                                laudantium, libero maiores maxime molestias nemo nihil nisi nulla officia omnis optio
-                                perspiciatis, quaerat qui recusandae reiciendis rem reprehenderit saepe sapiente sequi
-                                soluta tempora ut voluptatum. Adipisci, dolores eos exercitationem in ipsa officiis
-                                quos!
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4" style="padding: 0px;">
-                            <div class="ContainerWhite">
-                                <div class="likePage">5</div>
-                                <div class="btn-group" role="group" aria-label="Basic radio toggle button group"
-                                     style="margin:20px;">
-                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio1"
-                                           autocomplete="off">
-                                    <label class="btn btn-outline-primary" for="btnradio1">Up</label>
-
-                                    <input type="radio" class="btn-check" name="btnradio" id="btnradio2"
-                                           autocomplete="off">
-                                    <label class="btn btn-outline-primary" for="btnradio2">Down</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-8">
-                            <div class="question_tagPage">
-                                <ul class="nav">
-                                    <li class="nav-item">
-                                        <h5 style="margin-top:10px;">Tags:</h5>
-                                    <li class="nav-item">
-                                        <a class="nav-link active" aria-current="page" href="#">Tag1</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Tag2</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Tag3</a>
-                                    </li>
-
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="question">
-                    <div class="row">
-                        <div class="col-2">
-                            <div class="avatar_question">
-                                <img src="../static/img/Avatar2.jpeg" alt=""/>
-                            </div>
-                        </div>
-                        <div class="col-10">
-                            <div class="question-text">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam eaque earum
-                                est fugiat id illo ipsam officiis, porro quia repellendus sint. Aliquid atque dolorem ea
-                                eum fugiat id iure maxime nihil officia quo sequi soluta suscipit, totam velit
-                                voluptatum!
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ContainerWhite">
-                        <div class="like">5</div>
-                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group"
-                             style="margin-top:20px; padding-bottom:30px;">
-                            <input type="radio" class="btn-check" name="btnradio1" id="btnradio3" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btnradio3">Up</label>
-                            <input type="radio" class="btn-check" name="btnradio1" id="btnradio4" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btnradio4">Down</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
-                                Answer correct
-                            </label>
-                        </div>
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2"
+                               autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btnradio2">Down</label>
                     </div>
                 </div>
-                <div class="question">
-                    <div class="row">
-                        <div class="col-2">
-                            <div class="avatar_question">
-                                <img src="../static/img/Avatar3.jpg" alt=""/>
-                            </div>
-                        </div>
-                        <div class="col-10">
-                            <div class="question-text">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur distinctio
-                                dolores doloribus necessitatibus. Accusamus autem earum fuga incidunt itaque, optio
-                                ratione rem. Atque autem delectus dolore doloremque eum facere impedit in
-                                necessitatibus, neque, officia, officiis optio placeat quidem repudiandae.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ContainerWhite ">
-                        <div class="like">5</div>
-                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group"
-                             style="margin-top:20px; padding-bottom:30px;">
-                            <input type="radio" class="btn-check" name="btnradio2" id="btnradio5" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btnradio5">Up</label>
-                            <input type="radio" class="btn-check" name="btnradio2" id="btnradio6" autocomplete="off">
-                            <label class="btn btn-outline-primary" for="btnradio6">Down</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
-                            <label class="form-check-label" for="flexCheckDefault1">
-                                Answer correct
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mb-3 pb-2 mb-4  border-top border-3 border-secondary"
-                     style="padding-top:30px; margin-top:30px; width: 852px;">
-                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="6"
-                              placeholder="Enter your answer here..."></textarea>
-                </div>
-                <div class="LoginButton">Ask!</div>
             </div>
-            <div class="col-6" style="padding-right: 200px; margin-top:30px;">
-                <div class="container_tags">
-                    <h1>Popular tags</h1>
+            <div class="col-8">
+                {% include 'inc/tags.html' %}
+            </div>
+        </div>
 
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">A tag</li>
-                        <li class="list-group-item">A second tag</li>
-                        <li class="list-group-item">A third tag</li>
-                        <li class="list-group-item">A fourth tag</li>
-                        <li class="list-group-item">And a fifth one</li>
-                    </ul>
-                    <h1 style="margin-top:30px;">Best members</h1></div>
-                <ol class="list-group list-group-numbered" style="margin-right: 130px; margin-left: 80px;">
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">SuperCrut</div>
-                            Some information
-                        </div>
-                        <span class="badge bg-primary rounded-pill">344</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">MegaHorosh</div>
-                            Some information
-                        </div>
-                        <span class="badge bg-primary rounded-pill">289</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">Neploh</div>
-                            Some information
-                        </div>
-                        <span class="badge bg-primary rounded-pill">267</span>
-                    </li>
-                </ol>
-
+    </div>
+    <div class="question">
+        <div class="row">
+            <div class="col-2">
+                <div class="avatar_question">
+                    <img src="../static/img/Avatar2.jpeg" alt=""/>
+                </div>
+            </div>
+            <div class="col-10">
+                <div class="question-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam eaque earum
+                    est fugiat id illo ipsam officiis, porro quia repellendus sint. Aliquid atque dolorem ea
+                    eum fugiat id iure maxime nihil officia quo sequi soluta suscipit, totam velit
+                    voluptatum!
+                </div>
+            </div>
+        </div>
+        <div class="ContainerWhite">
+            <div class="like">5</div>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group"
+                 style="margin-top:20px; padding-bottom:30px;">
+                <input type="radio" class="btn-check" name="btnradio1" id="btnradio3" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btnradio3">Up</label>
+                <input type="radio" class="btn-check" name="btnradio1" id="btnradio4" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btnradio4">Down</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Answer correct
+                </label>
             </div>
         </div>
     </div>
-
-</main>
-
-
-<script src="/docs/5.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-        crossorigin="anonymous"></script>
-
-
-</body>
-</html>
+    <div class="question">
+        <div class="row">
+            <div class="col-2">
+                <div class="avatar_question">
+                    <img src="../static/img/Avatar3.jpg" alt=""/>
+                </div>
+            </div>
+            <div class="col-10">
+                <div class="question-text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur distinctio
+                    dolores doloribus necessitatibus. Accusamus autem earum fuga incidunt itaque, optio
+                    ratione rem. Atque autem delectus dolore doloremque eum facere impedit in
+                    necessitatibus, neque, officia, officiis optio placeat quidem repudiandae.
+                </div>
+            </div>
+        </div>
+        <div class="ContainerWhite ">
+            <div class="like">5</div>
+            <div class="btn-group" role="group" aria-label="Basic radio toggle button group"
+                 style="margin-top:20px; padding-bottom:30px;">
+                <input type="radio" class="btn-check" name="btnradio2" id="btnradio5" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btnradio5">Up</label>
+                <input type="radio" class="btn-check" name="btnradio2" id="btnradio6" autocomplete="off">
+                <label class="btn btn-outline-primary" for="btnradio6">Down</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
+                <label class="form-check-label" for="flexCheckDefault1">
+                    Answer correct
+                </label>
+            </div>
+        </div>
+    </div>
+    {% include 'inc/pagination.html' %}
+    <div class="mb-3 pb-2 mb-4  border-top border-3 border-secondary"
+         style="padding-top:30px; margin-top:30px; width: 852px;">
+                    <textarea class="form-control" id="exampleFormControlTextarea2" rows="6"
+                              placeholder="Enter your answer here..."></textarea>
+    </div>
+    <div class="LoginButton" style="margin-bottom: 20px;">Ask!</div>
+{% endblock %}

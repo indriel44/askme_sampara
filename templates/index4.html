@@ -1,137 +1,24 @@
-<!doctype html>
-<html lang="en" class="h-100">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AskMe</title>
+{% extends "inc/base.html" %}
 
+{% load static %}
 
-    <link href="../static/css/bootstrap.css" rel="stylesheet">
+{% block content %}
 
-
-    <!-- Custom styles for this template -->
-    <link href="../static/css/style.css" rel="stylesheet">
-</head>
-<body class="d-flex flex-column h-100">
-
-<header>
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-        <div class="container-fluid">
-            <div class="row" style="width: 1920px;">
-                <div class="col-3">
-                    <h2 style="color:white">HelpMePLZ</h2>
-                </div>
-                <div class="col-7" style="margin-top:4px;">
-                    <div class="row">
-                        <div class="col-4">
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#navbarCollapse" aria-controls="navbarCollapse"
-                                    aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarCollapse">
-                                <form class="d-flex" role="search">
-                                    <input class="form-control me-2" type="search" placeholder="Search"
-                                           aria-label="Search">
-                                    <button class="btn btn-outline-success" type="submit">Search</button>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="col-8">
-                            <div class="AskButton">Ask!</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-2">
-                    <div class="row" style="  margin: 10px;">
-                        <div class="col-6">
-                            <div class="fs-6" style="color:white">Register</div>
-                        </div>
-                        <div class="col-6">
-                            <div class="fs-6" style="color:white">Log in</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </nav>
-</header>
-
-<!-- Begin page content -->
-<main class="flex-shrink-0">
-    <div class="container_question">
-        <div class="row" style="margin-left:60px;">
-            <div class="col-6" style=" margin-top:30px;">
-                <h1>Log in</h1>
-                <h5 style="color:red; margin-top:20px;">Sorry, wrong password! </h5>
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon1">Login</span>
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Username"
-                           aria-describedby="basic-addon1" style="margin-top:20px;">
-                </div>
-
-                <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon2">Password</span>
-                    <input type="text" class="form-control" placeholder="********" aria-label="********"
-                           aria-describedby="basic-addon2" style="margin-top:20px;">
-                </div>
-                <div class="ContainerWhite" style="margin-top:30px;">
-                    <div class="LoginButton">Log in!</div>
-                    <a href="#" class="link-primary" style="margin-top:5px;">Create new account!</a>
-                </div>
-
-
-            </div>
-            <div class="col-6" style="padding-right: 200px; margin-top:30px;">
-                <div class="container_tags">
-                    <h1>Popular tags</h1>
-
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">A tag</li>
-                        <li class="list-group-item">A second tag</li>
-                        <li class="list-group-item">A third tag</li>
-                        <li class="list-group-item">A fourth tag</li>
-                        <li class="list-group-item">And a fifth one</li>
-                    </ul>
-                    <h1 style="margin-top:30px;">Best members</h1></div>
-                <ol class="list-group list-group-numbered" style="margin-right: 130px; margin-left: 80px;">
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">SuperCrut</div>
-                            Some information
-                        </div>
-                        <span class="badge bg-primary rounded-pill">344</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">MegaHorosh</div>
-                            Some information
-                        </div>
-                        <span class="badge bg-primary rounded-pill">289</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">Neploh</div>
-                            Some information
-                        </div>
-                        <span class="badge bg-primary rounded-pill">267</span>
-                    </li>
-                </ol>
-
-            </div>
-        </div>
+    <h1 style="margin-top:20px;">Log in</h1>
+    <h5 style="color:red; margin-top:20px;">Sorry, wrong password! </h5>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">Login</span>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+               aria-describedby="basic-addon1" style="margin-top:20px;">
     </div>
 
-</main>
-
-
-<script src="/docs/5.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-        crossorigin="anonymous"></script>
-
-
-</body>
-</html>
+    <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon2">Password</span>
+        <input type="text" class="form-control" placeholder="********" aria-label="********"
+               aria-describedby="basic-addon2" style="margin-top:20px;">
+    </div>
+    <div class="ContainerWhite" style="margin-top:30px;">
+        <div class="LoginButton">Log in!</div>
+        <a href="#{% url 'signup' %}" class="link-primary" style="margin-top:5px;">Create new account!</a>
+    </div>
+{% endblock %}
