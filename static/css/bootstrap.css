@@ -2238,8 +2238,11 @@ textarea.form-control-lg {
 .form-check {
   display: block;
   min-height: 1.5rem;
-  padding-left: 1.5em;
-  margin-bottom: 0.125rem;
+ height: 40px;
+ width:160px;
+ margin:20px;
+ padding-left:50px;
+  padding-top:8px;
 }
 .form-check .form-check-input {
   float: left;
