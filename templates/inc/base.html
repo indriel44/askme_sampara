@@ -75,40 +75,17 @@
                     <h1 style=" margin-top:30px;">Popular tags</h1>
 
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><a class="navbar-brand" href="{% url 'tag' %}"
-                                                       style="font-size: 16px; ">Tag1</a></li>
-                        <li class="list-group-item"><a class="navbar-brand" href="#" style="font-size: 16px; ">Tag2</a>
-                        </li>
-                        <li class="list-group-item"><a class="navbar-brand" href="#" style="font-size: 16px; ">Tag3</a>
-                        </li>
-                        <li class="list-group-item"><a class="navbar-brand" href="#" style="font-size: 16px; ">Tag4</a>
-                        </li>
-                        <li class="list-group-item"><a class="navbar-brand" href="#" style="font-size: 16px; ">Tag5</a>
-                        </li>
+                        {% include 'inc/tag_list.html' %}
+                        {% include 'inc/tag_list.html' %}
+                        {% include 'inc/tag_list.html' %}
+                        {% include 'inc/tag_list.html' %}
+                        {% include 'inc/tag_list.html' %}
                     </ul>
                     <h1 style="margin-top:30px;">Best members</h1></div>
                 <ol class="list-group list-group-numbered" style="margin-right: 130px; margin-left: 80px;">
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">SuperCrut</div>
-                            Some information
-                        </div>
-                        <span class="badge bg-primary rounded-pill">344</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">MegaHorosh</div>
-                            Some information
-                        </div>
-                        <span class="badge bg-primary rounded-pill">289</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <div class="ms-2 me-auto">
-                            <div class="fw-bold">Neploh</div>
-                            Some information
-                        </div>
-                        <span class="badge bg-primary rounded-pill">267</span>
-                    </li>
+                    {% include 'inc/best_member.html' %}
+                    {% include 'inc/best_member.html' %}
+                    {% include 'inc/best_member.html' %}
                 </ol>
 
             </div>

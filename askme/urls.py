@@ -28,6 +28,6 @@ urlpatterns = [
     path('ask', views.ask, name='ask'),
     path('hot', views.hot, name='hot'),
     path('tag', views.tagpage, name='tag'),
-    path ('settings', views.settings, name='settings'),
-    
+    path('settings', views.settings, name='settings'),
+
 ]

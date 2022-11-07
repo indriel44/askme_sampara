@@ -35,8 +35,7 @@ def ask(request):
 
 
 def question(request, question_id: int):
-    question_item = models.QUESTIONS[question_id]
-    context = {'question': question_item}
+    context = {'question': models.QUESTIONS[question_id], 'answer': models.ANSWERS[question_id]}
     return render(request, 'index7.html', context=context)
 
 

@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-2" style="padding: 0px;">
                 <div class="avatar_QuestionPage ">
-                    <img src="{% static "img/Avatar1.png" %}" alt=""/>
+                    <img src="{% static question.photos %}" alt=""/>
                 </div>
             </div>
             <div class="col-10">
@@ -40,72 +40,9 @@
         </div>
 
     </div>
-    <div class="question">
-        <div class="row">
-            <div class="col-2">
-                <div class="avatar_question">
-                    <img src="../static/img/Avatar2.jpeg" alt=""/>
-                </div>
-            </div>
-            <div class="col-10">
-                <div class="question-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aperiam eaque earum
-                    est fugiat id illo ipsam officiis, porro quia repellendus sint. Aliquid atque dolorem ea
-                    eum fugiat id iure maxime nihil officia quo sequi soluta suscipit, totam velit
-                    voluptatum!
-                </div>
-            </div>
-        </div>
-        <div class="ContainerWhite">
-            <div class="like">5</div>
-            <div class="btn-group" role="group" aria-label="Basic radio toggle button group"
-                 style="margin-top:20px; padding-bottom:30px;">
-                <input type="radio" class="btn-check" name="btnradio1" id="btnradio3" autocomplete="off">
-                <label class="btn btn-outline-primary" for="btnradio3">Up</label>
-                <input type="radio" class="btn-check" name="btnradio1" id="btnradio4" autocomplete="off">
-                <label class="btn btn-outline-primary" for="btnradio4">Down</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                <label class="form-check-label" for="flexCheckDefault">
-                    Answer correct
-                </label>
-            </div>
-        </div>
-    </div>
-    <div class="question">
-        <div class="row">
-            <div class="col-2">
-                <div class="avatar_question">
-                    <img src="../static/img/Avatar3.jpg" alt=""/>
-                </div>
-            </div>
-            <div class="col-10">
-                <div class="question-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam aspernatur distinctio
-                    dolores doloribus necessitatibus. Accusamus autem earum fuga incidunt itaque, optio
-                    ratione rem. Atque autem delectus dolore doloremque eum facere impedit in
-                    necessitatibus, neque, officia, officiis optio placeat quidem repudiandae.
-                </div>
-            </div>
-        </div>
-        <div class="ContainerWhite ">
-            <div class="like">5</div>
-            <div class="btn-group" role="group" aria-label="Basic radio toggle button group"
-                 style="margin-top:20px; padding-bottom:30px;">
-                <input type="radio" class="btn-check" name="btnradio2" id="btnradio5" autocomplete="off">
-                <label class="btn btn-outline-primary" for="btnradio5">Up</label>
-                <input type="radio" class="btn-check" name="btnradio2" id="btnradio6" autocomplete="off">
-                <label class="btn btn-outline-primary" for="btnradio6">Down</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
-                <label class="form-check-label" for="flexCheckDefault1">
-                    Answer correct
-                </label>
-            </div>
-        </div>
-    </div>
+
+    {% include 'inc/answer_item.html' %}
+    {% include 'inc/answer_item.html' %}
     {% include 'inc/pagination.html' %}
     <div class="mb-3 pb-2 mb-4  border-top border-3 border-secondary"
          style="padding-top:30px; margin-top:30px; width: 852px;">
