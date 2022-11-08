@@ -19,7 +19,7 @@ ANSWERS = [
         'likes': 5,
         'text': f'Text of answer #{question_id}',
         'photos': f"img/Avatar{question_id}.jpg",
-    } for question_id in range(6)
+    } for question_id in range(10)
 ]
 
 HOTQUESTIONS = [
