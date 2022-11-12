@@ -9,7 +9,7 @@
         <a href="{% url 'hot' %}" style="  font-size: 18px;  margin-top:16px;">Hot
             question</a>
     </div>
-    {% for question in questions %}
+    {% for question in page_obj %}
         {% include 'inc/question_item.html' %}
     {% endfor %}
 

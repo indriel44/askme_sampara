@@ -40,9 +40,9 @@
         </div>
 
     </div>
-
-    {% include 'inc/answer_item.html' %}
-    {% include 'inc/answer_item.html' %}
+    {% for answer in page_obj %}
+        {% include 'inc/answer_item.html' %}
+    {% endfor %}
     {% include 'inc/pagination.html' %}
     <div class="mb-3 pb-2 mb-4  border-top border-3 border-secondary"
          style="padding-top:30px; margin-top:30px; width: 852px;">

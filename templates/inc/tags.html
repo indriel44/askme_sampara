@@ -1,10 +1,12 @@
+{% load static %}
+
 <div class="question_tag">
     <ul class="nav">
         <li class="nav-item">
             <h5 style="margin-top:10px;">Tags:</h5>
-            {% for tag in question.tags %}
+            {% for tag in tags %}
                 <li class="nav-item">
-                    <a class="nav-link " href={% url 'tag' %}>{{ tag }}</a>
+                    <a class="nav-link " href={% url 'tag' tag_id=tag.id %}>{{ tag.title }}</a>
                 </li>
             {% endfor %}
 

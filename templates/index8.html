@@ -7,7 +7,7 @@
     <div class="ContainerWhite" style=" margin-top:20px;">
         <h1>Hot questions</h1>
     </div>
-    {% for question in questions %}
+    {% for question in page_obj %}
         {% include 'inc/question_item.html' %}
     {% endfor %}
 
