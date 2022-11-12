@@ -1,5 +1,5 @@
 from django.core.paginator import Paginator
-from django.http import HttpResponse, Http404
+from django.http import HttpResponse, Http404, HttpResponseBadRequest
 from django.shortcuts import render
 from django.views.generic import ListView
 
@@ -20,7 +20,8 @@ def mainpage(request):
 
 def tagpage(request, tag_id: int):
     contact_list = models.QUESTIONS
-    context = {'questions': models.QUESTIONS, 'tags': models.TAGS, 'query': models.TAGS[tag_id], 'page_obj':pagging(contact_list, request)}
+    context = {'questions': models.QUESTIONS, 'tags': models.TAGS, 'query': models.TAGS[tag_id],
+               'page_obj': pagging(contact_list, request)}
     return render(request, 'index2.html', context=context)
 
 
@@ -59,6 +60,10 @@ def hot(request):
 
 def pagging(contact_list, request):
     paginator = Paginator(contact_list, 3)
-    page_number = request.GET.get('page')
-    #if int(page_number) > paginator.num_pages: raise Http404
+    page_number = request.GET.get('page', 1)
+    try:
+        page = int(page_number)
+        if page > paginator.num_pages: raise Http404
+    except ValueError:
+        return HttpResponseBadRequest()
     return paginator.get_page(page_number)
