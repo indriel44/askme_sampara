@@ -6,7 +6,7 @@
 
     <div class="ContainerWhite" style=" margin-top:20px;">
         <h1 style="margin-right:30px;">Tag:</h1>
-        <h2 style="font-style:italic; margin-top:10px;">{{ query.title }}</h2>
+        <h2 style="font-style:italic; margin-top:10px;">{{ tag.name }}</h2>
     </div>
     {% for question in page_obj %}
         {% include 'inc/question_item.html' %}

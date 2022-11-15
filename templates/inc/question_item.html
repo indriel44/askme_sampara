@@ -4,11 +4,11 @@
     <div class="row">
         <div class="col-2">
             <div class="avatar_question">
-                <img src="{% static question.photos %}" alt=""/>
+                <img src="{% static question.user.avatar %}" alt=""/>
             </div>
         </div>
         <div class="col-10">
-            <a class="navbar-brand" href="{% url 'question' question_id=question.id %}"
+            <a class="navbar-brand" href="{% url 'question' question.id %}"
                style="  font-size: 32px;">{{ question.title }}</a>
             <div class="question-text">
                 {{ question.text }}
@@ -17,7 +17,7 @@
     </div>
     <div class="row">
         <div class="col-1">
-            <div class="like">{{ question.likes }}</div>
+            <div class="like">{# question.objects.get_questions_likes #} </div>
         </div>
         <div class="col-3 ">
             <div class="btn-group" role="group" aria-label="Basic radio toggle button group"
@@ -31,10 +31,10 @@
             </div>
         </div>
         <div class="col-3">
-            <div class="AnswerButton">answer({{ question.answer_number }})</div>
+            <div class="AnswerButton">answer({{ question.answer }})</div>
         </div>
         <div class="col-5">
-            {% include 'inc/tags.html' %}
+            {% include 'inc/tags.html' with tag=question.tag %}
 
         </div>
     </div>
